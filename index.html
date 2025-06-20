@@ -1,0 +1,56 @@
+# Generate 2000 bulletproof mindset rules in HTML format
+rules = [f"Rule #{i+1}: Stay focused. Eliminate distractions. Win daily." for i in range(2000)]
+
+# Create HTML content
+html_content = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2000 Bulletproof Mindset Rules</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #00ff88;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            background-color: #1e1e1e;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 255, 136, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>🧠 2000 Bulletproof Mindset Rules</h1>
+    <ul>
+"""
+
+# Add all rules into <li> tags
+for rule in rules:
+    html_content += f"        <li>{rule}</li>\n"
+
+# Close HTML tags
+html_content += """
+    </ul>
+</body>
+</html>
+"""
+
+# Save to file
+output_path = Path("/mnt/data/2000_bulletproof_mindset_rules.html")
+output_path.write_text(html_content)
+
+output_path
